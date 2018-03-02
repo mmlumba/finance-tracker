@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'my_portfolio' => 'users#my_portfolio'
   get 'search_stocks' => 'stocks#search'
+  resource :user_stocks, only: [:create, :destroy]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
